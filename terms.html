@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ILMA.AI Terms</title>
+<style>
+  :root{
+    --bg:#15131F; --panel:#1E1B2E; --panel-2:#241F35; --line:#2E2A40;
+    --text:#E8E4F0; --muted:#9B96B0; --amber:#FFB23E; --teal:#38D6B0;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#FAF9F6; --panel:#FFFFFF; --panel-2:#F1EFE9; --line:#E4E1D8;
+      --text:#221F2E; --muted:#6B6680; --amber:#B8791E; --teal:#0E8F72;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#FAF9F6; --panel:#FFFFFF; --panel-2:#F1EFE9; --line:#E4E1D8;
+    --text:#221F2E; --muted:#6B6680; --amber:#B8791E; --teal:#0E8F72;
+  }
+  :root[data-theme="dark"]{
+    --bg:#15131F; --panel:#1E1B2E; --panel-2:#241F35; --line:#2E2A40;
+    --text:#E8E4F0; --muted:#9B96B0; --amber:#FFB23E; --teal:#38D6B0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"Space Grotesk",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+  a{color:var(--teal)}
+  header{
+    display:flex; align-items:center; gap:12px;
+    padding:22px 28px; border-bottom:1px solid var(--line);
+    position:sticky; top:0; background:var(--bg); z-index:10;
+  }
+  .brand{font-weight:700; letter-spacing:.3px; font-size:18px; text-decoration:none; color:var(--text)}
+  .brand b{color:var(--amber)}
+  .doc-label{
+    margin-left:auto; font-family:"JetBrains Mono",monospace; font-size:11px;
+    letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
+  }
+  main{max-width:680px; margin:0 auto; padding:48px 28px 96px}
+  h1{font-size:32px; line-height:1.15; margin:0 0 6px; text-wrap:balance}
+  .meta{
+    font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--muted);
+    margin:0 0 40px;
+  }
+  .lede{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:20px 22px; margin:0 0 40px; font-size:15px; line-height:1.6; color:var(--text);
+  }
+  h2{
+    font-size:19px; margin:44px 0 14px; padding-top:20px; border-top:1px solid var(--line);
+  }
+  h2 .num{color:var(--teal); font-family:"JetBrains Mono",monospace; font-weight:600; margin-right:8px}
+  p{font-size:15.5px; line-height:1.75; color:var(--text); margin:0 0 14px; max-width:64ch}
+  ul{margin:0 0 14px; padding-left:22px}
+  li{font-size:15.5px; line-height:1.75; margin-bottom:6px; max-width:60ch}
+  strong{color:var(--text)}
+  .muted{color:var(--muted)}
+  footer{
+    max-width:680px; margin:0 auto; padding:0 28px 64px;
+    color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:24px;
+  }
+  footer a{color:var(--muted); text-decoration:underline}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#top"><b>ILMA</b>.AI</a>
+  <span class="doc-label">Legal · Terms</span>
+</header>
+
+<main id="top">
+  <h1>Terms of Service</h1>
+  <p class="meta">Effective September&nbsp;3, 2026 · v1.0</p>
+
+  <div class="lede">
+    ILMA.AI is an independent, single-operator project: it detects trending topics
+    and automatically produces and publishes short videos to social platforms
+    (currently TikTok), with a private dashboard for tracking performance. These
+    Terms cover the TikTok account(s) connected to ILMA.AI and anyone who
+    interacts with content it publishes.
+  </div>
+
+  <h2><span class="num">01</span>Acceptance</h2>
+  <p>
+    By connecting a TikTok account to ILMA.AI, or by using the ILMA.AI
+    dashboard, you agree to these Terms. If you do not agree, do not connect
+    an account or use the dashboard.
+  </p>
+
+  <h2><span class="num">02</span>What the service does</h2>
+  <p>ILMA.AI is an automation pipeline that, on a schedule:</p>
+  <ul>
+    <li>collects publicly available trending topics from open sources (Reddit, RSS feeds, Hacker News, and similar);</li>
+    <li>generates a short script and voice-over for a selected topic;</li>
+    <li>assembles a short vertical video with captions;</li>
+    <li>publishes that video to TikTok through TikTok's official Content Posting API, only when explicitly enabled by the operator.</li>
+  </ul>
+  <p>
+    Publishing is disabled by default. No step in this pipeline scrapes
+    TikTok, automates account logins, or bypasses TikTok's own rules — every
+    publish goes through TikTok's official API.
+  </p>
+
+  <h2><span class="num">03</span>Content &amp; ownership</h2>
+  <p>
+    The operator is responsible for every video ILMA.AI publishes. Only
+    footage, music and voice assets the operator has the rights to use are
+    fed into the pipeline. Generated captions and scripts are original text
+    produced for each topic, not reproductions of a third party's work.
+  </p>
+
+  <h2><span class="num">04</span>Acceptable use</h2>
+  <p>You (or ILMA.AI, on the operator's behalf) agree not to use the connected TikTok account to:</p>
+  <ul>
+    <li>post content that infringes someone else's copyright, trademark, or other rights;</li>
+    <li>post spam, misleading claims, or content designed to manipulate engagement metrics;</li>
+    <li>exceed TikTok's own posting-rate and content rules;</li>
+    <li>attempt to circumvent TikTok's audit / review requirements for public posting.</li>
+  </ul>
+
+  <h2><span class="num">05</span>No warranty</h2>
+  <p>
+    ILMA.AI is provided "as is," as a personal, self-funded project with no
+    dedicated support team. Automated publishing can fail, be delayed, or be
+    interrupted (for example, by TikTok API changes or rate limits). No
+    uptime or accuracy guarantee is made.
+  </p>
+
+  <h2><span class="num">06</span>Limitation of liability</h2>
+  <p>
+    To the fullest extent permitted by law, the operator of ILMA.AI is not
+    liable for indirect, incidental, or consequential damages arising from
+    the use of this service, including lost revenue or lost data.
+  </p>
+
+  <h2><span class="num">07</span>Changes</h2>
+  <p>
+    These Terms may be updated as the project evolves. The effective date
+    above reflects the latest revision.
+  </p>
+
+  <h2><span class="num">08</span>Contact</h2>
+  <p>
+    Questions about these Terms: <a href="mailto:natdoussin@gmail.com">natdoussin@gmail.com</a>.
+  </p>
+</main>
+
+<footer>
+  <span class="mono">ILMA.AI</span> — see also the <a href="privacy.html">Privacy Policy</a>.
+</footer>
+</body>
+</html>
