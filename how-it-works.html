@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How it works — ILMA.AI</title>
+<meta name="description" content="A stage-by-stage breakdown of the ILMA.AI pipeline: collect, score, script, voice, video, and publish through official platform APIs.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><b>ILMA</b>.AI</a>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html" aria-current="page">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="wide" id="top">
+  <p class="eyebrow">The pipeline</p>
+  <h1 class="hero">Six stages, one automated loop.</h1>
+  <p class="lede">
+    ILMA.AI runs the same six-stage cycle on a schedule. Each stage is a
+    small, independent module — if a paid or heavier tool isn't available
+    (a local language model, a text-to-speech engine, a video renderer),
+    that stage falls back to a lighter, free alternative rather than
+    stopping the pipeline.
+  </p>
+
+  <ol class="step-list">
+    <li>
+      <span class="num">01</span>
+      <div>
+        <h3>Collect</h3>
+        <p>
+          Pulls currently-trending topics from public, open sources —
+          Hacker News, public Reddit listings, and RSS feeds. No login-walled
+          scraping and no private data of any kind is touched at this stage.
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="num">02</span>
+      <div>
+        <h3>Score</h3>
+        <p>
+          Ranks the collected topics with a simple viral-potential score —
+          a mix of source popularity, freshness, and how well the source
+          itself has historically performed — and keeps only the top few.
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="num">03</span>
+      <div>
+        <h3>Script</h3>
+        <p>
+          Turns the selected topic into a short hook / body / call-to-action
+          script — via a locally-run language model when one is available,
+          or a template-based writer when it isn't. Every script is
+          generated fresh for that topic, not copied from a source article.
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="num">04</span>
+      <div>
+        <h3>Voice</h3>
+        <p>
+          Converts the script into a voice-over using free neural
+          text-to-speech voices, so every video has narration without
+          needing a human recording session.
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="num">05</span>
+      <div>
+        <h3>Video</h3>
+        <p>
+          Assembles a vertical (9:16) video with burned-in captions from the
+          voice-over and any supporting visuals, sized and encoded for
+          short-form vertical feeds.
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="num">06</span>
+      <div>
+        <h3>Publish</h3>
+        <p>
+          Sends the finished video to whichever platforms are connected and
+          explicitly enabled, exclusively through each platform's official
+          publishing API — see below. If no platform is enabled, the video
+          is simply queued and never sent anywhere.
+        </p>
+      </div>
+    </li>
+  </ol>
+
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">Publishing, platform by platform</h2>
+
+  <h3>TikTok</h3>
+  <p>
+    Videos are published using TikTok's official <strong>Content Posting
+    API</strong> with the Direct Post product. The connected account
+    authorizes ILMA.AI once, through TikTok's own OAuth consent screen
+    (PKCE flow) — ILMA.AI never sees or stores the account's TikTok
+    password. Every publish call goes through TikTok's API using the
+    <code class="mono">video.publish</code> scope; nothing is scraped and no
+    part of the TikTok app or website is automated directly.
+  </p>
+
+  <h3>Instagram</h3>
+  <p>
+    Videos are published as Reels using Meta's official <strong>Instagram
+    API with Instagram Login</strong> (no Facebook Page required). The flow
+    is: create a media container that points at the rendered video, poll
+    until Instagram finishes processing it, then publish the container.
+    Authorization again happens through Instagram's own OAuth consent
+    screen — ILMA.AI never sees or stores the account's Instagram password.
+  </p>
+
+  <h2>What's off by default</h2>
+  <p>
+    Every platform integration ships disabled. An operator has to
+    explicitly connect an account and flip a setting before ILMA.AI will
+    publish anything on their behalf — the pipeline runs its collect / score
+    / script / voice / video stages regardless, but stops short of
+    publishing until that switch is on.
+  </p>
+
+  <div class="links">
+    <a href="about.html">About ILMA.AI</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  ILMA.AI — an independent, single-operator project.
+</footer>
+</body>
+</html>

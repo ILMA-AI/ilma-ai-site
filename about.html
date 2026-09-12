@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — ILMA.AI</title>
+<meta name="description" content="ILMA.AI is an independent, single-operator project testing whether one person on one computer can run a full content pipeline with a zero-budget stack of free tools.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><b>ILMA</b>.AI</a>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <p class="eyebrow">About</p>
+  <h1 class="hero">One person, one computer, zero budget.</h1>
+  <p class="lede">
+    ILMA.AI is an independent project, built and operated by a single
+    person. There is no company behind it, no team, and no outside funding —
+    just one computer running a pipeline that was built in public, stage by
+    stage.
+  </p>
+
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">The premise</h2>
+  <p>
+    Short-form video is time-consuming to produce well: finding a topic
+    worth covering, writing something worth watching, recording narration,
+    editing, and publishing — all before the topic stops trending. ILMA.AI
+    is an experiment in whether that entire loop can be automated
+    end-to-end, honestly and within every platform's own rules, using
+    free and open tools rather than a paid content-operations stack.
+  </p>
+
+  <h2>How it's built</h2>
+  <p>
+    The backend is a small Python service (FastAPI) that runs the
+    collect → score → script → voice → video → publish pipeline described on
+    the <a href="how-it-works.html">How it works</a> page, plus a private
+    dashboard for the operator to watch it run, review what got published,
+    and see errors when a stage fails. Every piece is either open-source or
+    a platform's own official API — see that page for the specifics.
+  </p>
+
+  <h2>The rule that doesn't bend</h2>
+  <p>
+    ILMA.AI only ever talks to TikTok and Instagram through their official,
+    documented publishing APIs, with an account the operator explicitly
+    connects and authorizes through that platform's own OAuth screen. It
+    does not scrape either platform, does not automate logins, and does not
+    publish anything until the operator has switched that platform on. The
+    <a href="terms.html">Terms of Service</a> and
+    <a href="privacy.html">Privacy Policy</a> pages go into the specifics of
+    what that means for the connected account.
+  </p>
+
+  <h2>Where it's headed</h2>
+  <p>
+    The project is still early and still run by hand day to day. Near-term
+    work is about reliability — keeping the pipeline running unattended for
+    longer stretches and adding more trend sources — before any bigger
+    changes are considered. There's no roadmap promise beyond that; this is
+    a solo project, and it moves at a solo project's pace.
+  </p>
+
+  <div class="links">
+    <a href="how-it-works.html">How it works</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  ILMA.AI — an independent, single-operator project.
+</footer>
+</body>
+</html>

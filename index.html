@@ -3,83 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ILMA.AI</title>
-<style>
-  :root{
-    --bg:#15131F; --panel:#1E1B2E; --panel-2:#241F35; --line:#2E2A40;
-    --text:#E8E4F0; --muted:#9B96B0; --amber:#FFB23E; --teal:#38D6B0;
-  }
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg:#FAF9F6; --panel:#FFFFFF; --panel-2:#F1EFE9; --line:#E4E1D8;
-      --text:#221F2E; --muted:#6B6680; --amber:#B8791E; --teal:#0E8F72;
-    }
-  }
-  :root[data-theme="light"]{
-    --bg:#FAF9F6; --panel:#FFFFFF; --panel-2:#F1EFE9; --line:#E4E1D8;
-    --text:#221F2E; --muted:#6B6680; --amber:#B8791E; --teal:#0E8F72;
-  }
-  :root[data-theme="dark"]{
-    --bg:#15131F; --panel:#1E1B2E; --panel-2:#241F35; --line:#2E2A40;
-    --text:#E8E4F0; --muted:#9B96B0; --amber:#FFB23E; --teal:#38D6B0;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
-    font-family:"Space Grotesk",system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    min-height:100vh; display:flex; flex-direction:column;
-  }
-  .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
-  a{color:var(--teal)}
-  header{
-    display:flex; align-items:center; gap:12px;
-    padding:22px 28px; border-bottom:1px solid var(--line);
-  }
-  .brand{font-weight:700; letter-spacing:.3px; font-size:18px; text-decoration:none; color:var(--text)}
-  .brand b{color:var(--amber)}
-  main{max-width:640px; margin:0 auto; padding:64px 28px; flex:1}
-  .eyebrow{
-    font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:2px;
-    text-transform:uppercase; color:var(--teal); margin:0 0 16px;
-  }
-  h1{font-size:38px; line-height:1.15; margin:0 0 18px; text-wrap:balance}
-  .lede{font-size:17px; line-height:1.65; color:var(--text); max-width:56ch; margin:0 0 36px}
-  .lede .muted{color:var(--muted)}
-  .chain{
-    display:flex; gap:0; border:1px solid var(--line); border-radius:12px;
-    overflow:hidden; margin:0 0 40px;
-  }
-  .stage{flex:1; padding:14px 8px; text-align:center; background:var(--panel)}
-  .stage:not(:last-child){border-right:1px solid var(--line)}
-  .stage .lbl{font-family:"JetBrains Mono",monospace; font-size:9px; letter-spacing:1px;
-    text-transform:uppercase; color:var(--muted)}
-  links{display:none}
-  .links{display:flex; gap:12px; flex-wrap:wrap}
-  .links a{
-    font-family:"JetBrains Mono",monospace; font-size:13px; text-decoration:none;
-    color:var(--text); border:1px solid var(--line); background:var(--panel);
-    padding:10px 16px; border-radius:8px;
-  }
-  .links a:hover{border-color:var(--teal)}
-  footer{
-    padding:24px 28px; border-top:1px solid var(--line); color:var(--muted);
-    font-size:13px; text-align:center;
-  }
-</style>
+<title>ILMA.AI — Automated trend media</title>
+<meta name="description" content="ILMA.AI is a solo-built pipeline that detects trending topics, writes and voices a short script, assembles a vertical video, and publishes it through TikTok's and Instagram's official APIs.">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header>
-  <a class="brand" href="#top"><b>ILMA</b>.AI</a>
+  <a class="brand" href="index.html"><b>ILMA</b>.AI</a>
+  <nav class="site-nav">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <main id="top">
   <p class="eyebrow">Automated trend media</p>
-  <h1>Trending topics, turned into short videos, on autopilot.</h1>
+  <h1 class="hero">Trending topics, turned into short videos, on autopilot.</h1>
   <p class="lede">
     ILMA.AI is a solo-built pipeline that detects what's trending, writes and
     voices a short script, assembles a vertical video, and publishes it —
-    currently to TikTok, through TikTok's official Content Posting API.
+    through TikTok's and Instagram's official publishing APIs.
     <span class="muted">Built and operated by one person, from one computer.</span>
   </p>
 
@@ -92,13 +38,66 @@
     <div class="stage"><div class="lbl">Publish</div></div>
   </div>
 
+  <h2 style="margin-top:0; padding-top:0; border-top:none;">What it does</h2>
+  <p>
+    Every few hours, ILMA.AI scans public, open trend sources, scores each
+    topic for how likely it is to resonate, and — for whichever topic clears
+    the bar — writes a short script, generates a voice-over, assembles a
+    vertical video with captions, and publishes it to the platforms that are
+    connected and enabled. Nothing publishes unless the operator has
+    explicitly turned that platform on. Read the full breakdown on the
+    <a href="how-it-works.html">How it works</a> page.
+  </p>
+
+  <h2>Where it publishes</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>TikTok</h3>
+      <p>
+        Published through TikTok's official Content Posting API
+        (Direct Post). No scraping, no unofficial automation of the TikTok
+        app or website.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Instagram</h3>
+      <p>
+        Published as Reels through the Instagram API with Instagram Login
+        (Meta's official Graph API for content publishing).
+      </p>
+    </div>
+  </div>
+
+  <h2>Why it exists</h2>
+  <p>
+    ILMA.AI started as a test of a simple question: can one person, on one
+    computer, with a zero-budget stack of free and open tools, run a
+    content pipeline end to end — sourcing, writing, voicing, editing and
+    publishing — without violating a single platform's terms of service?
+    <a href="about.html">Read the full story</a>.
+  </p>
+
   <div class="links">
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
     <a href="terms.html">Terms of Service</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="mailto:natdoussin@gmail.com">Contact</a>
   </div>
 </main>
 
-<footer>ILMA.AI — an independent, single-operator project.</footer>
+<footer>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How it works</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  ILMA.AI — an independent, single-operator project.
+</footer>
 </body>
 </html>
