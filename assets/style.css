@@ -30,7 +30,12 @@ header{
   padding:22px 28px; border-bottom:1px solid var(--line);
   position:sticky; top:0; background:var(--bg); z-index:10;
 }
-.brand{font-weight:700; letter-spacing:.3px; font-size:18px; text-decoration:none; color:var(--text); white-space:nowrap}
+.brand{
+  display:flex; align-items:center; gap:8px;
+  font-weight:700; letter-spacing:.3px; font-size:18px;
+  text-decoration:none; color:var(--text); white-space:nowrap;
+}
+.brand img{width:24px; height:24px; border-radius:6px; display:block}
 .brand b{color:var(--amber)}
 nav.site-nav{display:flex; gap:18px; flex-wrap:wrap; margin-left:auto}
 nav.site-nav a{
@@ -38,6 +43,13 @@ nav.site-nav a{
   text-decoration:none; color:var(--muted);
 }
 nav.site-nav a:hover, nav.site-nav a[aria-current="page"]{color:var(--teal)}
+.tiktok-login{
+  display:inline-block;
+  font-family:"JetBrains Mono",monospace; font-size:12.5px; letter-spacing:.3px;
+  text-decoration:none; color:var(--bg); background:var(--teal);
+  padding:8px 14px; border-radius:8px; white-space:nowrap; font-weight:700;
+}
+.tiktok-login:hover{opacity:.85}
 .doc-label{
   font-family:"JetBrains Mono",monospace; font-size:11px;
   letter-spacing:1.5px; text-transform:uppercase; color:var(--muted);
